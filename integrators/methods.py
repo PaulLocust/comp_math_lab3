@@ -1,13 +1,12 @@
-
-from integrators.recatangle import rectangle_rule
+from integrators.rectangle import rectangle_left, rectangle_right, rectangle_middle
 from integrators.simpson import simpson_rule
 from integrators.trapezoid import trapezoid_rule
 
 # Словарь с методами, доступными для вычислений
 methods = {
-    "rectangle_left": lambda func, a, b, n: rectangle_rule(func, a, b, n, mode="left"),
-    "rectangle_right": lambda func, a, b, n: rectangle_rule(func, a, b, n, mode="right"),
-    "rectangle_middle": rectangle_rule,  # по умолчанию middle
+    "rectangle_left": rectangle_left,
+    "rectangle_right": rectangle_right,
+    "rectangle_middle": rectangle_middle,
     "trapezoid": trapezoid_rule,
     "simpson": simpson_rule
 }
