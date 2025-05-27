@@ -34,9 +34,8 @@ def get_discontinuity_points(func, a, b, n):
     # Проверка крайних точек и центра
     for point in [a, b, (a + b) / 2]:
         if not is_defined(func, point):
-            breakpoints.add(round(point, 10))  # округляем для устранения шумов
+            breakpoints.add(round(point, 10))
 
-    # Проверка по сетке
     h = (b - a) / n
     for i in range(n + 1):
         point = a + i * h

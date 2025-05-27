@@ -42,7 +42,7 @@ def compute_integral(func, a, b, epsilon, method):
     while error > epsilon:
         n *= 2
         new_result = methods[method](func, a, b, n)
-        error = abs(new_result - result) / coef
+        error = abs(new_result - result) / coef # Формула Рунге
         result = new_result
 
     return result, n

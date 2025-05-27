@@ -95,7 +95,7 @@ if __name__ == "__main__":
                 y1 = try_to_compute(func, bp - eps)
                 y2 = try_to_compute(func, bp + eps)
                 if y1 is not None and y2 is not None and abs(y1 - y2) > eps or (y1 == y2 and y1 is not None):
-                    converges = False
+                    converges = False # Не сходится
                     break
 
             if not converges:
